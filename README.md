@@ -1,47 +1,61 @@
-⚙️ Instalação
+project:
+  name: "Algoritmo Projects"
+  description: >
+    Este repositório contém duas aplicações Python distintas, desenvolvidas
+    para fins de estudo e prática em automação e web scraping.
 
-Clone ou baixe este repositório:
+  applications:
+    - name: "Scraper de Notícias"
+      description: "Coleta automaticamente manchetes de portais de notícias."
+    - name: "Bot de Login e Scraper de Bio do Instagram"
+      description: "Realiza login automatizado e extrai biografias de perfis."
 
-git clone https://github.com/seu-usuario/AlgoritmoProjects.git
-cd AlgoritmoProjects
+structure:
+  root: "AlgoritmoProject/"
+  files:
+    - "main.py              # Menu principal para selecionar os projetos"
+    - "requirements.txt     # Dependências do projeto"
+  directories:
+    - name: "news_scraper"
+      description: "Projeto I - Scraper de Notícias"
+      files:
+        - "scraper.py"
+        - "README.md"
+    - name: "instagram_bot"
+      description: "Projeto II - Instagram Bot"
+      files:
+        - "bot.py"
+        - "README.md"
 
+installation:
+  steps:
+    - "Clone este repositório:"
+    - command: |
+        git clone https://github.com/seu-usuario/AlgoritmoProjects.git
+        cd AlgoritmoProjects
+    - "Instale as dependências necessárias:"
+    - command: |
+        pip install -r requirements.txt
 
-Instale as dependências necessárias:
+execution:
+  description: "Execute o programa principal para acessar o menu interativo."
+  command: "python main.py"
+  options:
+    - "Projeto I: Scraper de Notícias"
+    - "Projeto II: Bot de Login e Scraper de Bio do Instagram"
 
-pip install -r requirements.txt
+outputs:
+  description: "Após a execução, cada projeto gera um arquivo JSON com os resultados obtidos."
+  files:
+    - project: "Scraper de Notícias"
+      file: "manchetes.json"
+      content: "Contém as manchetes coletadas"
+    - project: "Instagram Bot"
+      file: "instagram_bio.json"
+      content: "Contém as biografias extraídas dos perfis"
 
-🚀 Execução
-
-Para iniciar o programa principal e acessar o menu interativo:
-
-python main.py
-
-
-No menu, você poderá escolher entre:
-
-Projeto I: Scraper de Notícias
-
-Projeto II: Bot de Login e Scraper de Bio do Instagram
-
-📄 Saídas Geradas (JSONs)
-
-Cada projeto gera automaticamente um arquivo JSON com os resultados obtidos:
-
-Projeto	Arquivo Gerado	Conteúdo
-📰 Scraper de Notícias	manchetes.json	Manchetes coletadas de sites de notícias
-🤖 Instagram Bot	instagram_bio.json	Biografias extraídas de perfis do Instagram
-📚 Documentação Individual
-
-Para detalhes específicos de cada aplicação, consulte os READMEs dedicados:
-
-📘 News Scraper README
-
-📗 Instagram Bot README
-
-🧩 Tecnologias Utilizadas
-
-Python 3.x
-
-Selenium / Requests (para automação e scraping)
-
-JSON (para armazenamento de dados)
+technologies:
+  - "Python 3.x"
+  - "Selenium"
+  - "Requests"
+  - "JSON"
